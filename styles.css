@@ -1,0 +1,46 @@
+/* Google poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* Root variables */
+:root {
+    --header-height: 3rem;
+
+    /* Colors */
+    --test-color: hsl(240, 100%, 76%);
+    --hue-color: 120;
+    --hue-color-alt: 240;
+    --dark-color: hsl(var(--hue-color-alt), 48%, 5%);
+    --blend-color: hsl(var(--hue-color), 1%, 39%);
+    --highlight-color: hsl(var(--hue-color), 100%, 50%);
+    --text-color: hsl(var(--hue-color), 89%, 4%);
+    --body-color: hsl(var(--hue-color-alt), 69%, 87%);
+    --container-color: hsl(--hue-color-alt, 5%, 21%);
+    --color-gradient: linear-gradient(hsl(var(--hue-color), 100%, 76%), hsl(var(--hue-color-alt), 100%, 76%));
+    --scroll-thumb-color: ;
+    --scroll-thumb-color-alt: ;
+
+
+    /* Font sizes */
+    --body-font: "Poppins", sans-serif;
+    --xxl-font-size: 5rem;
+    --xl-font-size: 3.5rem;
+    --l-font-size: 2.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .98rem;
+    --smaller-font-size: .8rem;
+    --text-line-height: ;
+
+    /* Font weights */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* Bottom margins */
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+}
