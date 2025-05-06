@@ -1,1 +1,1 @@
-"# phone-store-landing-page" 
+"# store-landing-page" 
