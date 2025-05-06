@@ -3,22 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Css link -->
+    <title>My Awesome Store</title>
     <link rel="stylesheet" href="styles.css" />
-
-    <!-- Remix icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-
-    <title>Phone Store</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">StoreLogo</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="burger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product-section">
+        <h2>Our Featured Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x200/E0E0E0/B0B0B0?text=Product+Image+1"
+              alt="Elegant Smartwatch - Black"
+            />
+            <h3>Elegant Smartwatch</h3>
+            <p>
+              Stay connected in style with our latest smartwatch. Tracks
+              fitness, notifications, and more.
+            </p>
+            <button class="shop-now-btn">Shop Now</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x200/D0D0D0/A0A0A0?text=Product+Image+2"
+              alt="Wireless Bluetooth Headphones - White"
+            />
+            <h3>Wireless Headphones</h3>
+            <p>
+              Experience immersive sound with these comfortable, long-lasting
+              wireless headphones.
+            </p>
+            <button class="shop-now-btn">Shop Now</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x200/C0C0C0/909090?text=Product+Image+3"
+              alt="Portable Power Bank - Blue"
+            />
+            <h3>Portable Power Bank</h3>
+            <p>
+              Keep your devices charged on the go with this sleek and powerful
+              portable power bank.
+            </p>
+            <button class="shop-now-btn">Shop Now</button>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x200/B0B0B0/808080?text=Product+Image+4"
+              alt="Ergonomic Laptop Stand - Silver"
+            />
+            <h3>Ergonomic Laptop Stand</h3>
+            <p>
+              Improve your posture and workspace setup with this adjustable
+              ergonomic laptop stand.
+            </p>
+            <button class="shop-now-btn">Shop Now</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 My Awesome Store. All rights reserved.
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </p>
+    </footer>
+
+    <script>
+      // Basic JavaScript for mobile navigation toggle
+      const burgerMenu = document.querySelector(".burger-menu");
+      const navLinks = document.querySelector(".nav-links");
+
+      burgerMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        burgerMenu.classList.toggle("toggle");
+      });
+    </script>
   </body>
 </html>

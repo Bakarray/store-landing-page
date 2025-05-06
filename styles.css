@@ -1,46 +1,247 @@
-/* Google poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Clean, widely available font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background for a subtle look */
+    color: #333; /* Dark gray text for readability */
+    line-height: 1.6;
+}
+
+/* Header and Navigation Bar Styling */
+header {
+    background-color: #343a40; /* Dark background for header */
+    color: #fff; /* White text on dark background */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky; /* Makes the header stick to the top on scroll */
+    top: 0;
+    z-index: 1000; /* Ensures header is above other content */
+}
+
+.navbar {
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-between; /* Space out logo and links */
+    align-items: center; /* Vertically align items */
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the navbar */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem; /* Larger font size for logo */
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Align links horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 25px; /* Spacing between nav items */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+/* Burger Menu for Mobile Navigation */
+.burger-menu {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease; /* Smooth transition for animation */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Top/bottom margin and auto for horizontal centering */
+}
+
+.product-section h2 {
+    text-align: center; /* Center the section title */
+    margin-bottom: 40px; /* Space below the title */
+    font-size: 2.2rem;
+    color: #343a40;
+}
+
+/* Product Grid Styling (using Flexbox) */
+.product-grid {
+    display: flex; /* Use flexbox for the grid */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between product cards */
+    justify-content: center; /* Center items if they don't fill the row */
+}
+
+/* Product Card Styling */
+.product-card {
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a "card" feel */
+    padding: 20px;
+    width: calc(25% - 20px); /* Four cards per row, accounting for gap */
+    /* For smaller screens, this will be overridden by media queries */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.product-card img {
+    max-width: 100%; /* Ensure image is responsive within the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Slightly rounded corners for the image */
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #343a40;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #555; /* Slightly lighter text for description */
+    flex-grow: 1; /* Allows description to take available space, pushing button down */
+    margin-bottom: 15px;
+}
+
+.shop-now-btn {
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    margin-top: auto; /* Pushes the button to the bottom of the card if content above varies */
+}
+
+.shop-now-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Consistent dark background */
+    color: #f8f9fa; /* Light text for footer */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Space above the footer */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #007bff; /* Link color in footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for footer links */
+}
+
+/* Responsive Design - Media Queries */
+
+/* Medium screens (tablets, smaller desktops) */
+@media (max-width: 992px) {
+    .product-card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        background-color: #343a40; /* Background for dropdown */
+        padding: 0;
+        text-align: center; /* Center nav items */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when burger menu is clicked */
+    }
+
+    .nav-links li {
+        margin: 15px 0; /* Adjust spacing for vertical layout */
+    }
+
+    .burger-menu {
+        display: block; /* Show burger menu icon */
+    }
+
+    /* Burger menu animation */
+    .burger-menu.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger-menu.toggle .line2 {
+        opacity: 0;
+    }
+    .burger-menu.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    /* Renaming burger lines for clarity in JS if needed, but this CSS uses the existing div structure */
+    .burger-menu.toggle div:nth-child(1) {
+         transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger-menu.toggle div:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu.toggle div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 
 
-/* Root variables */
-:root {
-    --header-height: 3rem;
+    .product-card {
+        width: calc(100% - 20px); /* One card per row, full width */
+        /* Or use width: 100%; if you prefer no margin on sides from the gap property alone */
+    }
 
-    /* Colors */
-    --test-color: hsl(240, 100%, 76%);
-    --hue-color: 120;
-    --hue-color-alt: 240;
-    --dark-color: hsl(var(--hue-color-alt), 48%, 5%);
-    --blend-color: hsl(var(--hue-color), 1%, 39%);
-    --highlight-color: hsl(var(--hue-color), 100%, 50%);
-    --text-color: hsl(var(--hue-color), 89%, 4%);
-    --body-color: hsl(var(--hue-color-alt), 69%, 87%);
-    --container-color: hsl(--hue-color-alt, 5%, 21%);
-    --color-gradient: linear-gradient(hsl(var(--hue-color), 100%, 76%), hsl(var(--hue-color-alt), 100%, 76%));
-    --scroll-thumb-color: ;
-    --scroll-thumb-color-alt: ;
+    .product-section h2 {
+        font-size: 1.8rem; /* Slightly smaller title on mobile */
+    }
 
-
-    /* Font sizes */
-    --body-font: "Poppins", sans-serif;
-    --xxl-font-size: 5rem;
-    --xl-font-size: 3.5rem;
-    --l-font-size: 2.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .98rem;
-    --smaller-font-size: .8rem;
-    --text-line-height: ;
-
-    /* Font weights */
-    --font-medium: 500;
-    --font-semi-bold: 600;
-
-    /* Bottom margins */
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
+    .logo a {
+        font-size: 1.5rem;
+    }
 }
